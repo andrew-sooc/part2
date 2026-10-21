@@ -182,3 +182,43 @@ h1 {
 
     font-size: 18px;
 }
+/* NEWS TICKER */
+
+.news-ticker {
+    width: 100%;
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    background: #020617;
+
+    border: 2px solid #475569;
+    border-radius: 10px;
+
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+
+    padding: 12px 0;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    animation: newsMove 15s linear infinite;
+}
+
+/* Move from RIGHT to LEFT */
+
+@keyframes newsMove {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
