@@ -206,7 +206,7 @@ h1 {
     font-size: 18px;
     font-weight: bold;
 
-    animation: newsMove 15s linear infinite;
+    animation: newsMove 7s linear infinite;
 }
 
 /* Move from RIGHT to LEFT */
