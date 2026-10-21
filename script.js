@@ -1,4 +1,57 @@
-let score = 0;
+let highScores =
+    JSON.parse(localStorage.getItem("highScores")) || [];
+
+const scoreList =
+    document.getElementById("scoreList");
+
+
+function displayScores() {
+
+    scoreList.innerHTML = "";
+
+    if (highScores.length === 0) {
+
+        scoreList.innerHTML =
+            "<li>No scores yet!</li>";
+
+        return;
+    }
+
+
+    highScores.forEach(function(score) {
+
+        const li = document.createElement("li");
+
+        li.textContent = score + " points";
+
+        scoreList.appendChild(li);
+
+    });
+}
+
+
+function saveScore() {
+
+    highScores.push(score);
+
+    highScores.sort(function(a, b) {
+
+        return b - a;
+
+    });
+
+    highScores = highScores.slice(0, 5);
+
+    localStorage.setItem(
+        "highScores",
+        JSON.stringify(highScores)
+    );
+
+    displayScores();
+}
+
+
+displayScores();let score = 0;
 let lives = 3;
 let time = 30;
 
