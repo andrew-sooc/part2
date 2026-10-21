@@ -1,64 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Catch the Square — 2nd try to code bwahhahaha</title>
-
+    <title>Catch the Square - Arcade Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="game">
-
-        <h1>🎮 Catch the Square</h1>
+    <main class="game">
+        <h1>🎮 Catch the Square!</h1>
+        <p class="subtitle">Test your speed and beat your high score!</p>
 
         <div class="stats">
-            <span>🏆 Score: <b id="score">0</b></span>
-            <span>❤️ Lives: <b id="lives">3</b></span>
-            <span>⏱️ Time: <b id="time">30</b></span>
+            <div>🏆 Score: <b id="score">0</b></div>
+            <div>❤️ Lives: <b id="lives">3</b></div>
+            <div>⏱️ Time: <b id="time">30</b></div>
         </div>
 
         <div id="gameArea">
-
-            <button id="target"></button>
-
-            <button id="enemy"></button>
-
-            <button id="powerUp">⚡</button>
-
+            <button id="target" aria-label="Green target"></button>
+            <button id="enemy" aria-label="Red enemy"></button>
+            <button id="powerUp" aria-label="Bonus power-up">⚡</button>
         </div>
 
         <button id="startButton">START GAME</button>
-
         <p id="message">Click START to begin!</p>
-<div id="leaderboard">
 
-    <h2>🏆 Personal Leaderboard</h2>
+        <section id="leaderboard">
+            <h2>🏆 Personal Leaderboard</h2>
+            <p class="subtitle">Your top 5 scores</p>
+            <ol id="scoreList">
+                <li>No scores yet!</li>
+            </ol>
+            <button id="resetScores">Clear High Scores</button>
+        </section>
 
-    <ol id="scoreList">
-        <li>No scores yet!</li>
-    </ol>
-
-</div
-    <div class="news-ticker">
-    <div class="ticker-content">
-        Pogi Jerome &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi Reuben &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi JJ &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi AJ &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi BJ &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi Zymon &nbsp;&nbsp; • &nbsp;&nbsp;
-        Pogi Ton &nbsp;&nbsp; • &nbsp;&nbsp;
-    </div>
-</div>
-    </div>
+        <div class="news-ticker">
+            <span class="ticker-label">🔥 POGI LIST</span>
+            <div class="ticker-window">
+                <div class="ticker-content">
+                    <span>Pogi Jerome　 •　 Pogi Reuben　 •　 Pogi JJ　 •　 Pogi AJ　 •　 Pogi BJ　 •　 Pogi Zymon　 •　 Pogi Ton　 •　</span><span aria-hidden="true">Pogi Jerome　 •　 Pogi Reuben　 •　 Pogi JJ　 •　 Pogi AJ　 •　 Pogi BJ　 •　 Pogi Zymon　 •　 Pogi Ton　 •　</span>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
