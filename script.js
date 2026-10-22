@@ -169,11 +169,11 @@ enemy.addEventListener("click", function() {
     }
 });
 
-// Bonus power-up: earn five points.
+// Bonus power-up: earn twenty points.
 powerUp.addEventListener("click", function() {
     if (!gameRunning) return;
 
-    score += 5;
+    score += 20;
     scoreText.textContent = score;
 
     powerUp.style.display = "none";
