@@ -1,6 +1,6 @@
 
 let score = 0;
-let lives = 3;
+let lives = 1;
 let time = 30;
 let gameRunning = false;
 
